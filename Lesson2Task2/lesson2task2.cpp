@@ -22,7 +22,7 @@ int main()
             count++;
         }
 
-        // B. Fint the greatest commonm ultipleof7
+
         if (i % 7 == 0 && i % 13 == 0)
         {
             greatestCommonMultiple = i;
