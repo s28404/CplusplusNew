@@ -3,6 +3,12 @@
 
 using namespace std;
 
+void printArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        cout << " " << arr[i];
+    }
+}
+
 int main() {
     int n;
 
@@ -24,8 +30,8 @@ int main() {
         cout << "Write " << i + 1 << " number: ";
         cin >> num;
 
-        while (cin.fail()) {
-            cout << "Please enter a valid integer" << endl;
+        while (cin.fail() || num < 0) {
+            cout << "Please enter a valid positive integer" << endl;
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cin >> num;
@@ -50,6 +56,9 @@ int main() {
     if (!found) {
         cout << "Element '5' is not found in the array.\n";
     }
+
+    cout << "It's the array:" << endl;
+    printArray(arr, n);
 
     return 0;
 }
