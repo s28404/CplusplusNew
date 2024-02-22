@@ -61,6 +61,7 @@ int main() {
         cout << sortedArr[i] << " ";
     }
     cout << endl;
+    court << "Hello";
 
     return 0;
 }
